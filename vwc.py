@@ -1,12 +1,14 @@
 import argparse
 
 from char_parsing import count_characters
+from line_parsing import count_lines
 
 # Defining the Argument parser
 parser = argparse.ArgumentParser(description = "vwc: Custom command-line word count")
 
 # Defining available Arguments
 parser.add_argument("-c", "--chars", action = "store_true", help = "Count characters")
+parser.add_argument("-l", "--lines", action = "store_true", help = "Count lines")
 parser.add_argument("filename", type = str, help = "File to process")
 
 # Parsing Arguments
@@ -19,6 +21,9 @@ final_result = ""
 # File processing
 if args.chars:
   char_count = count_characters(filename)
+  final_result += char_count if char_count != "" else ""
+if args.lines:
+  char_count = count_lines(filename)
   final_result += char_count if char_count != "" else ""
 
 
