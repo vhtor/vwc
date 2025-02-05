@@ -1,6 +1,6 @@
 # My custom wc
 
-This project is `wc` (word count) program exercise. The `wc` program is a command-line utility that counts the number of lines, words, and characters in a given file or input stream.
+This project is a `wc` (word count) program fork. The `wc` program is a command-line utility that counts the number of lines, words, and characters in a given file or input stream.
 
 ## Usage
 
